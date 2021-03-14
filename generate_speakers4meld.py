@@ -75,9 +75,6 @@ def allNum(word):
 speakers = set()
 Speaker = []
 filepath = 'train_sent_emo.csv'
-filepath_w_query = 'train_query.txt'
-filepath_w_answer = 'train_answer.txt'
-filepath_w_image = 'train_image.txt'
 readFileRows(filepath, speakers, Speaker)
 filepath = 'test_sent_emo.csv'
 readFileRows(filepath, speakers, Speaker)

@@ -101,22 +101,13 @@ def readFileRows(filepath, dimension_size=17, normalization=True):
                         speaker.append(replace_abbreviations(Speaker[index]))
                     #speaker.append(Speaker[index])
                     emotion.append(Emotion[index])
-                    #code.interact(local=locals())
-                    # dialogue.append(' '.join(tk.tokenize(Utterance[index])))
                 else:
                     if len(dialogue) < 2:
                         dialogue, speaker, emotion = [], [], []
                         continue;
-                    #code.interact(local=locals())
-                    #f_q = open(filepath_w_query, 'a')
-                    #f_i = open(filepath_w_image, 'a')
-                    #with open(filepath_w_query, 'a') as f_q, open(filepath_w_image, 'a') as f_i:
-                    #adj_matrix_speaker = sp.lil_matrix((70, 70), dtype='int8')
-                    #adj_matrix_adj = sp.lil_matrix((70, 70), dtype='int8')
-                    #adj_matrix_emotion = sp.lil_matrix((70, 70), dtype='int8')
+
                     for k in range(len(dialogue)-1):
-                        #f_q = open(filepath_w_query, 'w')
-                        #f_i = open(filepath_w_image, 'w')
+
                         adj_matrices = []
                         adj_matrix_speaker_text = sp.lil_matrix((90, 90), dtype='int8')
                         adj_matrix_speaker_ima = sp.lil_matrix((90, 90), dtype='int8')
@@ -176,21 +167,7 @@ def readFileRows(filepath, dimension_size=17, normalization=True):
                         adj_matrices.append(adj_matrix_emotion_ima)
                         #code.interact(local=locals())
                         adj_matrix.append(adj_matrices)
-                    #code.interact(local=locals())
-            #                f_q.write(dialogue[j] + '\t\t' + emotion[j] + ' </d> ')
-             #                   dia_utt = 'dia'+str(idx)+'_utt'+str(j)
-              #                  if dia_utt not in word2embed.keys():
-               #                     count += 1
-                #                    temp = np.random.uniform(-0.25, 0.25, 17)
-                 #                   word2embed[dia_utt] = [str(item) for item in temp.tolist()]
-                  #              f_i.write(' '.join(word2embed[dia_utt])+'\t\t')
-                                #code.interact(local=locals())
-                   #         f_q.write('\n')
-                    #        f_i.write('\n')
-                    #f_q.close()
-                    #f_i.close()
-                        #    f_a.write(speaker[k+1] + ' </d> ' + dialogue[k+1] + ' </d> ' + emotion[k+1] + ' </d> ')
-                         #   f_a.write('\n')
+
                     dialogue = []
                     speaker = []
                     emotion = []
@@ -199,13 +176,7 @@ def readFileRows(filepath, dimension_size=17, normalization=True):
         print('index=',index)
         pkl.dump(adj_matrix, open(data_type+'.pkl', 'wb'), protocol=-1)
         print(len(adj_matrix))
-        #code.interact(local=locals())
-
-        # code.interact(local=locals())
 
 filepath = data_type+'_sent_emo.csv'
-filepath_w_query = data_type+'_query.txt'
-filepath_w_answer = data_type+'_answer.txt'
-filepath_w_image = data_type+'_image.txt'
 readFileRows(filepath)
 

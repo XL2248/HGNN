@@ -82,17 +82,15 @@ def readFileRows(filepath, dimension_size=17):
                     dialogue.append(' '.join(tk.tokenize(replace_abbreviations(Utterance[index]))))
                     speaker.append(replace_abbreviations(Speaker[index]))
                     emotion.append(Emotion[index])
-                    # dialogue.append(' '.join(tk.tokenize(Utterance[index])))
+
                 else:
                     if len(dialogue) < 2:
                         dialogue, speaker, emotion = [], [], []
                         continue;
-                    #f_q = open(filepath_w_query, 'a')
-                    #f_i = open(filepath_w_image, 'a')
+
                     with open(filepath_w_query, 'a') as f_q, open(filepath_w_answer, 'a') as f_a, open(filepath_w_image, 'a') as f_i:
                         for k in range(len(dialogue)-1):
-                        #f_q = open(filepath_w_query, 'w')
-                        #f_i = open(filepath_w_image, 'w')
+
                             for j in range(k+1):
                                 f_q.write(speaker[j] + '\t\t' +dialogue[j] + '\t\t' + emotion[j] + ' </d> ')
                                 dia_utt = 'dia'+str(idx)+'_utt'+str(j)
@@ -101,7 +99,7 @@ def readFileRows(filepath, dimension_size=17):
                                     temp = np.random.uniform(-0.25, 0.25, 17)
                                     word2embed[dia_utt] = [str(item) for item in temp.tolist()]
                                 f_i.write(' '.join(word2embed[dia_utt])+'\t\t')
-                                #code.interact(local=locals())
+
                             dia_utt = 'dia'+str(idx)+'_utt'+str(k+1)
                             if dia_utt not in word2embed.keys():
                                 temp = np.random.uniform(-0.25, 0.25, 17)
@@ -118,7 +116,6 @@ def readFileRows(filepath, dimension_size=17):
         print('count=',count)            # break;
         print('index=',index)
 
-        # code.interact(local=locals())
 
 filepath = data_type+'_sent_emo.csv'
 filepath_w_query = data_type+'_query.txt'

@@ -45,14 +45,6 @@ def replace_abbreviations(text):
     return new_text
 
 def readFileRows(filepath, dimension_size=17):
-    '''
-    word2embed = {}
-    with open(data_type+'.txt', 'r') as fopen:
-        for line in fopen:
-            w = line.strip().split()
-            word2embed[' '.join(w[:-dimension_size])] = w[-dimension_size:]
-            #code.interact(local=locals())
-    '''
     emotion2idx = {'neutral': 0, 'surprise': 1, 'fear': 2, 'sadness': 3, 'joy': 4, 'disgust': 5, 'anger': 6}
     emotion2count = {'no_emotion': 0, 'surprise': 0, 'fear': 0, 'sadness': 0, 'happiness': 0, 'disgust': 0, 'anger': 0}
     tk = MosesTokenizer()
