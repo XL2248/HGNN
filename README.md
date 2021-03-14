@@ -17,8 +17,8 @@ The implementation is based on [ReCoSa](https://github.com/zhanghainan/ReCoSa). 
 
 ## Generate data
 + For MELD
-generate the data format and the matrix A for training 
 
+Generate the data format and the matrix A for training 
 (The uploaded train.txt, dev.txt, and test.txt are the facial features extracted by [Openface](https://github.com/TadasBaltrusaitis/OpenFace). You can also use the )
 
 ```
