@@ -35,7 +35,7 @@ python prepro.py
 
 
 3、To train:
-bash train.py
+python train.py
 
 
 4、To eval:
