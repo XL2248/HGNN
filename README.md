@@ -30,7 +30,7 @@ python generate_speakers4meld.py (generate speakers' name)
 ```
 + For DailyDialog
 
-You need to modify the code to remove the speaker, the image part to train dailydialog.
+You need to modify the code to remove the speaker, the image part to train on dailydialog.
 ```
 generate_data_matrix_A_4dailydialog.py
 ```
