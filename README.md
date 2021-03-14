@@ -9,8 +9,17 @@ numpy>=1.13.0
 regex>=2017.6.7
 
 tensorflow>=1.2.0
+# Generate data
+## For MELD
+1. generate the data format and the matrix A for training 
+(The uploaded train.txt, dev.txt, and test.txt are the facial features extracted by Openface.)
+python generate_data4meld.py train/test/dev
+python generate_matrix_A4meld.py train/test/dev
+python generate_speakers4meld.py (generate speakers' name)
+## For DailyDialog
+generate_data_matrix_A_4dailydialog.py
 
-
+# Training
 1、parameter setting:
 hyperparams.py
 
