@@ -13,7 +13,7 @@ tensorflow>=1.2.0
 
 1、parameter setting:
 hyperparams.py
-train.py
+
 
 
 2、To generate vocab:
@@ -21,7 +21,7 @@ python prepro.py
 
 
 3、To train:
-bash train.sh
+bash train.py
 
 
 4、To eval:
