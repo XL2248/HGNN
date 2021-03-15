@@ -30,9 +30,9 @@ python generate_speakers4meld.py (generate speakers' name)
 ```
 + For DailyDialog
 
-You need to modify the code to remove the speaker, the image part to train on dailydialog.
+You need to modify the code to remove the speaker, the image part to train on Dailydialog.
 ```
-generate_data_matrix_A_4dailydialog.py
+python generate_data_matrix_A_4dailydialog.py
 ```
 # Training
 1、parameter setting:
@@ -67,19 +67,19 @@ chandler: now , there 's two reasons .	neutral
 ```
 Souce looks like:
 ```
-or ! or , we could go to the bank , close our accounts and cut them off at the source .		neutral  \</d\>  
+or ! or , we could go to the bank , close our accounts and cut them off at the source .		neutral  </d>  
 
-or ! or , we could go to the bank , close our accounts and cut them off at the source .		neutral  \</d\>  you 're a genius !		joy  \</d\>  
+or ! or , we could go to the bank , close our accounts and cut them off at the source .		neutral  </d>  you 're a genius !		joy  </d>  
 
-or ! or , we could go to the bank , close our accounts and cut them off at the source .		neutral  \</d\>  you 're a genius !		joy  \</d\>  aww , man , now we wo n't be bank buddies !		sadness  \</d\>  
+or ! or , we could go to the bank , close our accounts and cut them off at the source .		neutral  </d>  you 're a genius !		joy  </d>  aww , man , now we wo n't be bank buddies !		sadness  </d>  
 ```
 Target:
 ```
-chandler  \</d\>  you 're a genius !  \</d\>  joy  \</d\> 
+chandler  </d>  you 're a genius !  </d>  joy  </d> 
 
-joey  \</d\>  aww , man , now we wo n't be bank buddies !  \</d\>  sadness  \</d\>  
+joey  </d>  aww , man , now we wo n't be bank buddies !  </d>  sadness  </d>  
 
-chandler  \</d\>  now , there 's two reasons .  \</d\>  neutral  \</d\>  
+chandler  </d>  now , there 's two reasons .  </d>  neutral  </d>  
 ```
 
 ## Citation
