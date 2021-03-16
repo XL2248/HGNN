@@ -89,7 +89,7 @@ class Graph():
                 ## Embedding
                 embeddingsize = hp.hidden_units/2
                 self.enc_embed = embedding(tf.reshape(self.x,[-1,hp.maxlen]), #batch_size*max_turn=240 shape=(240, 50, 256)
-                                      vocab_size=len(en2idx), 
+                                      vocab_size=len(de2idx), 
                                       num_units=embeddingsize, 
                                       scale=True,
                                       scope="enc_embed")
