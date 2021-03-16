@@ -30,8 +30,9 @@ def make_vocab_src(fpath, fname):
     for line in file1.readlines():
         for content_emotion in line.split("</d>"):
             #code.interact(local=locals())
-            content = content_emotion.split("\t\t")[0]
-            words.extend(content.split())
+            if len(content_emotion.split("\t\t")) > 1:
+                content = content_emotion.split("\t\t")[1]
+                words.extend(content.split())
     #words = text.split()
     word2cnt = Counter(words)
     if not os.path.exists('preprocessed'): os.mkdir('preprocessed')
