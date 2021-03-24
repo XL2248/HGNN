@@ -13,7 +13,9 @@ The implementation is based on [ReCoSa](https://github.com/zhanghainan/ReCoSa). 
 
 + regex>=2017.6.7
 
-+ tensorflow>=1.2.0
++ tensorflow=1.10.1
+
++ Scipy=1.1.0
 
 ## Generate data
 + For MELD
