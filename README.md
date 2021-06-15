@@ -89,12 +89,15 @@ chandler  </d>  now , there 's two reasons .  </d>  neutral  </d>
 If you find this project helps, please cite our paper :)
 
 ```
-@misc{liang2020infusing,
-      title={Infusing Multi-Source Knowledge with Heterogeneous Graph Neural Network for Emotional Conversation Generation}, 
-      author={Yunlong Liang and Fandong Meng and Ying Zhang and Jinan Xu and Yufeng Chen and Jie Zhou},
-      year={2020},
-      eprint={2012.04882},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL}
+@article{Liang_Meng_Zhang_Chen_Xu_Zhou_2021, 
+	title={Infusing Multi-Source Knowledge with Heterogeneous Graph Neural Network for Emotional Conversation Generation}, 
+	volume={35}, 
+	url={https://ojs.aaai.org/index.php/AAAI/article/view/17575}, 
+	number={15}, 
+	journal={Proceedings of the AAAI Conference on Artificial Intelligence}, 
+	author={Liang, Yunlong and Meng, Fandong and Zhang, Ying and Chen, Yufeng and Xu, Jinan and Zhou, Jie}, 
+	year={2021}, 
+	month={May}, 
+	pages={13343-13352} 
 }
 ```
