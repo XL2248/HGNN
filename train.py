@@ -155,8 +155,7 @@ class Graph():
             self.enc = tf.map_fn(lambda x: x, self.enc, dtype=tf.float32)
             self.enc = feedforward(self.enc, num_units=[4*hp.hidden_units, hp.hidden_units])
             with tf.variable_scope("emotion"):
-               text_image = tf.map_fn(lambda x: x[:-1], self.enc, dtype=tf.float32)
-               x3 = tf.reduce_max(text_image, axis = 1)
+               x3 = tf.reduce_max(self.enc, axis = 1)
                self.emotion_logits = linear(x3, 7, True, False, scope="softmax")
                outputs_emotion = tf.matmul(self.emotion_logits, emotion_memory)
                outputs_emotion_ = tf.tile(tf.expand_dims(outputs_emotion, 1), [1, 50, 1])#shape=(50, 50, 128)
